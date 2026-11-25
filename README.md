@@ -1,4 +1,4 @@
-# dsh-codeflow
+# @xiaolong54/dsh-codeflow
 
 A dsh bundle that has **no interface**. It gives the agent that writes and
 fixes your code two things: one tool that reads the project as function blocks
@@ -147,6 +147,15 @@ node --test "test/*.test.mjs"
 dsh plugin --profile desktop add github:xiaolong54/dsh-codeflow
 ```
 
+### From npm
+
+```sh
+npm add @xiaolong54/dsh-codeflow
+```
+
+The plugin has no client half, so there is nothing to build and no build
+permission is needed — the tarball carries the whole plugin.
+
 ### As a local bundle
 
 ```sh
@@ -155,9 +164,6 @@ cd dsh-codeflow
 npm link
 dsh plugin --profile desktop add file:<this directory>
 ```
-
-The plugin has no client half, so there is nothing to build and no build
-permission is needed.
 
 ## License
 
