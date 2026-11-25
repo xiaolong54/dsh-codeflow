@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Code data-flow map",
+    "description": "This plugin has no interface. It gives the agent two things: one tool, codeflow_map, which reads the project as function blocks joined by data flow (nine actions — file / block / flow / area / overview / contracts / diagnostics / scaffold / convention — every answer is the text the model reads plus the same facts as data); and one prompt, which says that code has to be modular and composable (one feature per named function, an entry point that only orchestrates, data in through parameters and out through return values, one description line per function, small blocks, static imports only) and that a bug is fixed by following the data — start at the block where the symptom appears, walk back along the value to the block that produced it, and change the producer rather than the symptom. Those six rules are machine-checkable items too, so the model can check whether it kept them. The plugin only reads; the changes are the agent's work.",
+    "detail": "docs/DETAIL.md"
+  }
+}

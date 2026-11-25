@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "代码数据流图",
+    "description": "这个插件没有界面，只给 agent 两样东西：一个工具 codeflow_map，把项目读成「用数据流连起来的功能块」（file / block / flow / area / overview / contracts / diagnostics / scaffold / convention 九个动作，每个回答都是模型读的文本加同一份事实的数据）；一段提示词，告诉模型代码要模块化可组装（一个功能一个具名函数、入口只编排、数据进参数出返回值、每个函数一行说明、块要小、跨文件只用静态 import），以及改错要顺着数据走——从出症状的块沿值往回找到生产它的块，改生产者而不是改症状。这六条规则同时是机器可查的项，模型能查自己有没有守住。插件只读不写，改动由 agent 做。",
+    "detail": "docs/DETAIL.zh.md"
+  }
+}
