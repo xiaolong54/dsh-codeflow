@@ -1,0 +1,86 @@
+{
+  "format": 1,
+  "title": {
+    "en": "xiaolong54 plugins",
+    "zh": "xiaolong54 的插件"
+  },
+  "description": {
+    "en": "Personal plugin market of xiaolong54.",
+    "zh": "xiaolong54 的个人插件市场。"
+  },
+  "metadata": {
+    "categories": {
+      "personal": {
+        "title": {
+          "en": "Personal",
+          "zh": "个人"
+        }
+      }
+    },
+    "labels": {
+      "personal": {
+        "title": {
+          "en": "Personal",
+          "zh": "个人"
+        }
+      }
+    },
+    "sortKeys": {
+      "published": {
+        "title": {
+          "en": "Publish date",
+          "zh": "发布日期"
+        },
+        "order": "desc"
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "@xiaolong54/dsh-codeflow",
+      "title": {
+        "en": "Code data-flow map",
+        "zh": "代码数据流图"
+      },
+      "description": {
+        "en": "One tool the model calls and one prompt that explains it: the project read as function blocks joined by data flow, so the agent writes modular, composable code and follows a value back to the block that produced it when something breaks.",
+        "zh": "一个模型会调用的工具，加一段解释它的提示词：把项目读成用数据流连起来的功能块，让 agent 写出模块化、可组装的代码；出问题时顺着值往回找到生产它的那个块。"
+      },
+      "icon": "icons/codeflow.svg",
+      "author": "xiaolong54",
+      "homepage": "https://github.com/xiaolong54/dsh-codeflow#readme",
+      "repository": {
+        "url": "https://github.com/xiaolong54/dsh-codeflow"
+      },
+      "metadata": {
+        "category": "personal",
+        "labels": [
+          "personal"
+        ],
+        "keywords": [
+          "dsh",
+          "dsh-plugin",
+          "deepseek-harness",
+          "agent",
+          "data-flow",
+          "refactoring",
+          "modularity"
+        ]
+      },
+      "versions": [
+        {
+          "version": "4.0.0",
+          "publishTimestamp": 1795617600,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/xiaolong54/dsh-codeflow",
+            "commit": "c4aea48dbe3b9f35a8bb29ae980023d1db261a16"
+          },
+          "engines": {
+            "dsh": ">=0.2.2-rc.3"
+          }
+        }
+      ]
+    }
+  ]
+}

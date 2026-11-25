@@ -1,13 +1,16 @@
 {
   "name": "@xiaolong54/dsh-codeflow",
   "version": "4.0.0",
-  "private": true,
+  "private": false,
   "type": "module",
+  "license": "MIT",
   "description": "One tool the model calls and one prompt that explains it: the project read as function blocks joined by data flow, so the agent writes modular, composable code and follows a value back to the block that produced it when something breaks. No interface, no writes: the plugin observes, the model decides.",
+  "main": "index.js",
   "exports": {
     ".": "./index.js",
     "./locale/*.json": "./locale/*.json",
-    "./icon": "./icon.svg"
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
   },
   "files": [
     "index.js",
@@ -17,6 +20,30 @@
     "docs",
     "icon.svg"
   ],
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaolong54/dsh-codeflow.git"
+  },
+  "homepage": "https://github.com/xiaolong54/dsh-codeflow#readme",
+  "bugs": {
+    "url": "https://github.com/xiaolong54/dsh-codeflow/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "agent",
+    "data-flow",
+    "refactoring",
+    "modularity",
+    "code-review"
+  ],
+  "engines": {
+    "dsh": ">=0.2.2-rc.3"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"

@@ -125,6 +125,10 @@ session, and a file that did not change is not parsed again.
 | `src/i18n.js` | the words the model reads about a problem |
 | `src/text.js` | small shared text helpers |
 | `tools/measure-langs.mjs` | measures how well the parser covers a language |
+| `tools/build-market-index.mjs` | builds the plugin market index |
+| `tools/github-repo.mjs` | creates the GitHub repository |
+| `tools/github-pages.mjs` | enables GitHub Pages for the market index |
+| `tools/github-whoami.mjs` | reports which GitHub account the credential is |
 | `docs/HOST-API.md` | a verified reference of the DSH Host plugin API |
 
 ## Languages
@@ -141,6 +145,22 @@ node --test "test/*.test.mjs"
 
 ## Install
 
+### From the plugin market
+
+The bundle is listed in a plugin market index that installs this repository at
+a pinned commit:
+
+```
+https://xiaolong54.github.io/dsh-codeflow/market/index.json
+```
+
+In dsh, open **Plugins → Discover → Add index source**, paste that URL, then
+install **Code data-flow map**.
+
+A Git install fetches sources, so the bundle is installed from the exact commit
+the index pins. This package has no client half and no build step, so nothing
+runs at install time and no build permission is needed.
+
 ### From the command line
 
 ```sh
@@ -153,9 +173,6 @@ dsh plugin --profile desktop add github:xiaolong54/dsh-codeflow
 npm add @xiaolong54/dsh-codeflow
 ```
 
-The plugin has no client half, so there is nothing to build and no build
-permission is needed — the tarball carries the whole plugin.
-
 ### As a local bundle
 
 ```sh
@@ -164,6 +181,17 @@ cd dsh-codeflow
 npm link
 dsh plugin --profile desktop add file:<this directory>
 ```
+
+## Publish a new version
+
+```sh
+git commit -am "…"
+node tools/build-market-index.mjs   # rewrites docs/market/index.json with the new commit
+git push
+```
+
+The index pins the commit it was built from, so a new commit is installed only
+after the index is rebuilt and pushed.
 
 ## License
 
