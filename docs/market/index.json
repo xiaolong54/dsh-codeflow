@@ -70,11 +70,11 @@
       "versions": [
         {
           "version": "4.0.0",
-          "publishTimestamp": 1795617600,
+          "publishTimestamp": 1795618692,
           "source": {
             "type": "git",
             "url": "https://github.com/xiaolong54/dsh-codeflow",
-            "commit": "c4aea48dbe3b9f35a8bb29ae980023d1db261a16"
+            "commit": "00db841f0b81594e9698201898e3c4d45c8a676b"
           },
           "engines": {
             "dsh": ">=0.2.2-rc.3"
